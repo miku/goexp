@@ -24,6 +24,8 @@
 
 Projects: writing a geomimg image generator command line tool.
 
+* [ProjectGeomImg](ProjectGeomImg.md)
+
 <!--
 * [LayoutExecutables](LayoutExecutables.md)
 * [Refactoring](Refactoring.md)
