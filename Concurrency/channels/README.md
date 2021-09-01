@@ -92,7 +92,7 @@ The behavior of a channel is directly influenced by its current `State`. The sta
 
 * [Basic mechanics](example1/example1.go) ([Go Playground](https://play.golang.org/p/UY5gai9Ojsm))
 * [Tennis game](example2/example2.go) ([Go Playground](https://play.golang.org/p/PvFKD_tNwir))
-* [Parallel web crawler](example3/example3.go)
+* [Parallel web crawler](example3/main.go)
 
 ## Advanced Code Review
 
