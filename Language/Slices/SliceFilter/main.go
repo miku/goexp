@@ -22,6 +22,7 @@ func main() {
 	sliceInfo("a", a)
 	a = a[:i]
 	sliceInfo("a", a)
+	// fmt.Println(a[6]) // panic: runtime error: index out of range [6] with length 5
 }
 
 func sliceInfo(name string, s []int) {

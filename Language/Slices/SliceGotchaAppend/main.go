@@ -14,8 +14,8 @@ func f() {
 	y := append(x, 2) // 3. append, new var y
 	z := append(x, 3) // 4. append, new var z
 
-	fmt.Println("y", y) // WHAT IS Y?
-	fmt.Println("z", z) // WHAT IS Z?
+	fmt.Println("y", y) // WHAT IS Y? -- 0 1 2 | 0 1 2   | 0 1 2 3
+	fmt.Println("z", z) // WHAT IS Z? -- 0 1 3 | 0 1 2 3 | 0 1 2 3
 }
 
 func g() {
@@ -37,13 +37,13 @@ func g() {
 	sliceInfo("y", y)
 	sliceInfo("z", z)
 
-	fmt.Println("y", y) // WHAT IS Y?
-	fmt.Println("z", z) // WHAT IS Z?
+	fmt.Println("y", y) // WHAT IS Y? | 0 1 2 3 | 0 1 2 3   | ... 000 | 0 1 2 4
+	fmt.Println("z", z) // WHAT IS Z? | 0 1 2 4 | 0 1 2 3 4 | ... 000 | 0 1 2 4
 }
 
 func main() {
-	fmt.Println("f")
-	f()
+	// fmt.Println("f")
+	// f()
 	fmt.Println("g")
 	g()
 }

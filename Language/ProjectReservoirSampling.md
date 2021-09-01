@@ -12,3 +12,4 @@ That's it.
 
 * implement a small tool, that would allow to stream data from stdin and would output a random sample
 * allow the reservoir size to be altered
+

@@ -13,7 +13,7 @@ func main() {
 	fmt.Println(int('日')) // 26085
 
 	for i, c := range "Ä" {
-		fmt.Printf("%d c=%c T=%T s=%s v=%v d=%d x=%x\n", i, c, c, c, c, c, c)
+		fmt.Printf("%d c=%c T=%T v=%v d=%d x=%x\n", i, c, c, c, c, c)
 	}
 }
 
