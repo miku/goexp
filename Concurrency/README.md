@@ -1,11 +1,15 @@
 # Concurrency
 
-* [Notions](Notions.md)
+* [Intro](Intro.md)
 * [Goroutines](goroutines/README.md)
 * [Channels](channels/README.md)
 * [Select](select/README.md)
 
 ----
+
+Exercises
+
+* [Exercises](Exercises.md)
 
 Projects
 
