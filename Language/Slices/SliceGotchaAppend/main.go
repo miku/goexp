@@ -42,12 +42,14 @@ func g() {
 }
 
 func main() {
+	fmt.Println("f")
 	f()
+	fmt.Println("g")
 	g()
 }
 
 func sliceInfo(name string, s []int) {
-	fmt.Printf("[%s] %p len=%d cap=%d\n", name, s, len(s), cap(s))
+	fmt.Printf("[%s] %p len=%d cap=%d %v\n", name, s, len(s), cap(s), s)
 }
 
 // W3hdIDB4YzAwMDBiNjAyMCBsZW49MiBjYXA9Mgp5IFswIDEgMl0KeiBbMCAxIDNdClt4XSAweGMwMDAw
