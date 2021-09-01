@@ -40,6 +40,8 @@ Use "go help <command>" for more information about a command.
 ...
 ```
 
+![](https://raw.githubusercontent.com/miku/goforprogrammers/master/static/gotool.png)
+
 ## Download and install packages
 
 Downloading and installing an executable.
