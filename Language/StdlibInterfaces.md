@@ -88,8 +88,6 @@ Sidenote: For filesystems, there is a [pread(2) system call](http://man7.org/lin
 
 > To avoid using an intermediate buffer entirely, types can implement interfaces to read and write directly. When implemented, the Copy() function will **avoid the intermediate buffer** and use these implementations directly.
 
-* maybe not the best use case: io.ReaderFrom &mdash; a data structure, that know how to deserialize itself (maybe better to use an [encoding.TextUnmarshaler](https://golang.org/pkg/encoding/#TextUnmarshaler).
-
 ----
 
 ## Use cases | io.ReaderFrom
