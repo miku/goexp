@@ -14,7 +14,6 @@
 * [StringByteSlice](StringByteSlice.md)
 * [StdlibInterfaces](StdlibInterfaces.md)
 * [DefaultValuesWorkaround](DefaultValuesWorkaround.md)
-* [FunctionalOptionsPattern](FunctionalOptionsPattern.md)
 * [Naming](Naming.md)
 * [MissingGenerics](MissingGenerics.md)
 * [StructTags](StructTags.md)

@@ -2,7 +2,7 @@
 
 A few ways to check for identity:
 
-* `==`
+* `==` ()
 * `bytes.Equal` (compares two byte slices)
 * `reflect.DeepEqual`  (recursive comparison)
 
