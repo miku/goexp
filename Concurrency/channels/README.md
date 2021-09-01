@@ -92,8 +92,10 @@ The behavior of a channel is directly influenced by its current `State`. The sta
 
 * [Basic mechanics](example1/example1.go) ([Go Playground](https://play.golang.org/p/UY5gai9Ojsm))
 * [Tennis game](example2/example2.go) ([Go Playground](https://play.golang.org/p/PvFKD_tNwir))
-* [Parallel web crawler](example3/example3.go)
-* [Parallel link checker](example4/main.go)
+* [Race](example3/example3.go)
+* [Unbuffered w/ guarantees](example4/example4.go)
+* [Program timeout](example5/example5.go)
+* [Parallel link checker](example6/main.go)
 
 ## Advanced Code Review
 
