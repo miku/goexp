@@ -1,1 +1,3 @@
 # Concurrency
+
+* Notions
