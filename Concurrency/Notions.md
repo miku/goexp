@@ -44,3 +44,11 @@ Package context was added only in Go 1.7, as a way to unify cancellation a bit.
 * when multiple select cases are possible one is chosen at random
 
 A study found just as many bugs in Go code using CSP vs classic structures like mutexes
+
+
+## Typical patterns
+
+* fan out, fan out-fan it (workers and queue)
+* bounded concurrency
+* timeouts
+* signal handling
