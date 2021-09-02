@@ -1,9 +1,7 @@
-# Patterns
+# Patterns and miscelleneous ideas
 
-Idiomatic Go.
+* [ConcurrencyExtra](ConcurrencyExtra.md)
 
 
-## Directory layout
-
-* cookiecutter templates
-* example projects: 
+* [ProjectLayout](ProjectLayout.md)
+* [Mistakes](Mistakes.md)
