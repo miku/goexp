@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"net/http/httputil"
 )
 
 // Exercise: Write a debug handler, that returns a response with information
@@ -13,16 +12,7 @@ import (
 //
 // Return an HTTP 500, if something goes wrong.
 
-// Debug show the request.
-func Debug(w http.ResponseWriter, r *http.Request) {
-	// w.Write([]byte(r.UserAgent()))
-	b, err := httputil.DumpRequest(r, false)
-	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
-		return
-	}
-	w.Write(b)
-}
+// Debug prints out information about the request.
 
 // Echo is a basic HTTP Handler.
 func Echo(w http.ResponseWriter, r *http.Request) {
