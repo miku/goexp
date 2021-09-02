@@ -8,7 +8,4 @@ Overall design:
 * each worker sends results to another channel
 * one goroutine collects the results and writes them to stdout (e.g. as JSON)
 
-```
-$ parlink < list_of_urls.txt
-```
 

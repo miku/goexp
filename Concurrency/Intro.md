@@ -50,5 +50,5 @@ A study found just as many bugs in Go code using CSP vs classic structures like 
 
 * fan out, fan out-fan it (workers and queue)
 * bounded concurrency
-* timeouts
-* signal handling
+* timeouts, [Timeout](timeout/main.go)
+* signal handling, [Signal](signal/main.go)

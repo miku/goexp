@@ -18,7 +18,7 @@ func main() {
 		// We use `select` to execute a peice of code depending on which
 		// channel receives a message first
 		select {
-		case <-time.After(2 * time.Second):
+		case <-time.After(5 * time.Second):
 			// If we receive a message after 2 seconds
 			// that means the request has been processed
 			// We then write this as the response

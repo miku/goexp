@@ -11,6 +11,7 @@ import (
 	"runtime"
 	"strings"
 	"sync"
+	"time"
 )
 
 // workResult of a URL lookup
@@ -20,11 +21,15 @@ type workResult struct {
 	Err        error  `json:"err"`
 }
 
+var client = http.Client{
+	Timeout: 5 * time.Second,
+}
+
 // worker takes work item off queue and puts result back on an out channel.
 func worker(queue chan string, out chan workResult, wg *sync.WaitGroup) {
 	defer wg.Done()
 	for link := range queue {
-		resp, err := http.Get(link)
+		resp, err := client.Get(link)
 		r := workResult{Link: link, Err: err}
 		if err == nil {
 			r.StatusCode = resp.StatusCode
