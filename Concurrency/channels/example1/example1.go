@@ -20,7 +20,7 @@ func init() {
 
 func main() {
 
-	waitForResult()
+	// waitForResult()
 	// fanOut()
 
 	// waitForTask()
@@ -30,7 +30,7 @@ func main() {
 	// fanOutSem()
 	// boundedWorkPooling()
 	// drop()
-	// cancellation()
+	cancellation()
 }
 
 // waitForResult: You are a manager and you hire a new employee. Your new
@@ -91,18 +91,17 @@ func fanOut() {
 // work your sending is received by the employee.
 func waitForTask() {
 	ch := make(chan string)
-
 	go func() {
 		p := <-ch
 		fmt.Println("employee : recv'd signal :", p)
+
 	}()
 
 	time.Sleep(time.Duration(rand.Intn(500)) * time.Millisecond)
 	ch <- "paper"
 	fmt.Println("manager : sent signal")
-
-	time.Sleep(time.Second)
-	fmt.Println("-------------------------------------------------------------")
+	// time.Sleep(time.Second)
+	// fmt.Println("-------------------------------------------------------------")
 }
 
 // pooling: You are a manager and you hire a team of employees. None of the new
@@ -112,7 +111,7 @@ func waitForTask() {
 // take your work is unknown because you need a guarantee that the work your
 // sending is received by an employee.
 func pooling() {
-	ch := make(chan string)
+	ch := make(chan string, 1000)
 
 	g := runtime.NumCPU()
 	for e := 0; e < g; e++ {

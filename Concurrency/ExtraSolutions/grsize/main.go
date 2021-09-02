@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"runtime"
 	"sync"
@@ -37,9 +36,9 @@ func main() {
 	}
 	wg.Wait()
 	// All goroutines running.
-	fmt.Printf("number of goroutines running: %v\n", runtime.NumGoroutine())
+	log.Printf("number of goroutines running: %v\n", runtime.NumGoroutine())
 
 	after := memConsumed()
 
-	fmt.Printf("%.3fkb\n", float64(after-before)/numGoroutines/1000)
+	log.Printf("%.3fkb\n", float64(after-before)/numGoroutines/1000)
 }

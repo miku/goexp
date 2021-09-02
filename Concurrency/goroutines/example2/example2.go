@@ -31,8 +31,8 @@ func main() {
 
 	// Create the first goroutine and manage its lifecycle here.
 	go func() {
+		defer wg.Done()
 		printHashes("A")
-		wg.Done()
 	}()
 
 	// Create the second goroutine and manage its lifecycle here.

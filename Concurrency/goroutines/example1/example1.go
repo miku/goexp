@@ -7,14 +7,14 @@ package main
 
 import (
 	"fmt"
-	"runtime"
 	"sync"
+	"time"
 )
 
 func init() {
 
 	// Allocate one logical processor for the scheduler to use.
-	runtime.GOMAXPROCS(1)
+	// runtime.GOMAXPROCS(1)
 }
 
 func main() {
@@ -50,6 +50,7 @@ func lowercase() {
 	// Display the alphabet three times
 	for count := 0; count < 3; count++ {
 		for r := 'a'; r <= 'z'; r++ {
+			time.Sleep(10 * time.Millisecond)
 			fmt.Printf("%c ", r)
 		}
 	}
@@ -61,6 +62,7 @@ func uppercase() {
 	// Display the alphabet three times
 	for count := 0; count < 3; count++ {
 		for r := 'A'; r <= 'Z'; r++ {
+			time.Sleep(10 * time.Millisecond)
 			fmt.Printf("%c ", r)
 		}
 	}
