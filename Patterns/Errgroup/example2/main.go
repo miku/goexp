@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 
 	"golang.org/x/sync/errgroup"
@@ -19,6 +20,7 @@ func main() {
 		url := url // https://golang.org/doc/faq#closures_and_goroutines
 		g.Go(func() error {
 			// Fetch the URL.
+			log.Println(url)
 			resp, err := http.Get(url)
 			if err == nil {
 				resp.Body.Close()

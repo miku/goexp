@@ -11,7 +11,7 @@ Exercises:
 
 ----
 
-* [OnReaders](Slides.md)
+* [OnReaders](OnReaders/Slides.md)
 
 Exercises:
 
