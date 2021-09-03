@@ -62,9 +62,54 @@ You get a context back and a function to cancel it. You want to call `cancel` ex
 
 ## Errgroup
 
+The small errgroup package helps handling errors with goroutines. However, there
+is only a single error returned. If we want to know more details about the
+failures, we'll need to use something else.
+
+Instead of the go keyword, we have a Go function.
+
+```
+func (g *Group) Go(f func() error)
+```
+
+We need to wait on the errgroup, a single error would make this fail.
+
+```
+if err := g.Wait(); err == nil {
+    fmt.Println("Successfully fetched all URLs.")
+}
+```
+
+> WithContext returns a new Group and an associated Context derived from ctx.
+
+> The derived Context is canceled the first time a function passed to Go returns
+> a non-nil error or the first time Wait returns, whichever occurs first. 
 
 
 ## Aggregate Errors
+
+Keeping track of multiple errors.
+
+* [https://github.com/kubernetes/apimachinery/blob/06deae5c9c2c030d771a467e086b6c791e8800dc/pkg/util/errors/errors.go#L231-L246](https://github.com/kubernetes/apimachinery/blob/06deae5c9c2c030d771a467e086b6c791e8800dc/pkg/util/errors/errors.go#L231-L246)
+
+```go
+// AggregateGoroutines runs the provided functions in parallel, stuffing all
+// non-nil errors into the returned Aggregate.
+// Returns nil if all the functions complete successfully.
+func AggregateGoroutines(funcs ...func() error) Aggregate {
+	errChan := make(chan error, len(funcs))
+	for _, f := range funcs {
+		go func(f func() error) { errChan <- f() }(f)
+	}
+	errs := make([]error, 0)
+	for i := 0; i < cap(errChan); i++ {
+		if err := <-errChan; err != nil {
+			errs = append(errs, err)
+		}
+	}
+	return NewAggregate(errs)
+}
+```
 
 ## Hedged Requests
 

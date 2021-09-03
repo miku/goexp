@@ -21,6 +21,7 @@ func Query(ctx context.Context) (string, error) {
 func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), 500*time.Millisecond)
 	defer cancel()
+	// Query would normally take a second, but we're cancelling it.
 	result, err := Query(ctx)
 	if err != nil {
 		log.Fatal(err)
