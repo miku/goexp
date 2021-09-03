@@ -9,7 +9,7 @@
 <!-- Die Brautleute; short summaries at the beginning of the sections -->
 
 ----
-
+<!--
 # About me
 
 SWE [@ubleipzig](https://ub.uni-leipzig.de).
