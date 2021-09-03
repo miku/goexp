@@ -1,5 +1,0 @@
-total 12K
-drwxrwxr-x 2 tir tir 4.0K Sep  3 03:06 .
-drwxrwxr-x 3 tir tir 4.0K Sep  3 03:03 ..
--rw-rw-r-- 1 tir tir  118 Sep  3 03:06 main.go
--rw-rw-r-- 1 tir tir    0 Sep  3 03:06 sample.txt
