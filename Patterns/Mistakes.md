@@ -82,3 +82,29 @@ Here two things play together:
 
 Hence, a `MarshalJSON` method is promoted on the event, but it belongs to time
 only.
+
+
+## Defer gotcha
+
+Arguments to defer are evaluated right away.
+
+Solution:
+
+* use a pointer
+* use defer with a closure
+
+Example: [Defer](Defer/main.go)
+
+
+## Not closing resources
+
+* especially `http.Response.Body` - which is a `ReadCloser`
+
+----
+
+# Code style
+
+## Nesting
+
+* writing nested code (let the happy path flow down the left hand side)
+
